@@ -47,12 +47,12 @@
 
                     if ! <.gitignore grep '.devenv'; then
                         touch .gitignore
-                        echo "\n.devenv\n" >> .gitignore
+                        echo ".devenv/" >> .gitignore
                         echo "added .devenv to .gitignore"
                     fi
                     
                     if ! <.gitignore grep '.direnv'; then
-                        echo "\n.direnv\n" >> .gitignore
+                        echo ".direnv/" >> .gitignore
                         echo "added .direnv to .gitignore"
                     fi
                     git add .envrc
