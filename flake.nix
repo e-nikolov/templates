@@ -7,7 +7,7 @@
         path = ./templates/devenv;
         description = "A direnv supported Nix flake with devenv integration.";
         welcomeText = ''
-          # Run `direnv allow` and then ./devenv-setup to complete the setup.
+          # Run `direnv allow` and then `setup-devenv` to complete the setup.
         '';
       };
     };

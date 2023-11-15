@@ -35,17 +35,18 @@
                   scripts.setup-devenv.exec = ''
                     #!/usr/bin/env bash
 
-                    if [[ -f ".git" ]]; then
+                    if [[ ! -f ".git" ]]; then
                       git init .
                       echo "set up git repository"
                     fi
 
-                    if [[ -f ".gitignore" ]]; then
+                    if [[ ! -f ".gitignore" ]]; then
                         touch .gitignore
                         echo "added .gitignore"
                     fi
 
                     if ! <.gitignore grep '.devenv'; then
+                        touch .gitignore
                         echo "\n.devenv\n" >> .gitignore
                         echo "added .devenv to .gitignore"
                     fi
