@@ -28,6 +28,14 @@
                   # https://devenv.sh/reference/options/
                   packages = [ pkgs.hello ];
 
+                  languages.nix.enable = true;
+
+                  languages.javascript.enable = true;
+                  languages.javascript.corepack.enable = true;
+                  languages.typescript.enable = true;
+                  languages.python.enable = true;
+                  languages.python.package = pkgs.python312;
+
                   enterShell = ''
                     hello
                   '';
@@ -57,7 +65,7 @@
                         echo "added .direnv to .gitignore"
                         git add .gitignore
                     fi
-                    
+
                     git add .envrc
                     git add flake.nix
                     git add flake.lock
