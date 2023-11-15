@@ -45,12 +45,12 @@
                         echo "added .gitignore"
                     fi
 
-                    if [[ ! <.gitignore grep '.devenv' ]]; then
+                    if ! <.gitignore grep '.devenv'; then
                         echo "\n.devenv\n" >> .gitignore
                         echo "added .devenv to .gitignore"
                     fi
                     
-                    if [[ ! <.gitignore grep '.direnv' ]]; then
+                    if ! <.gitignore grep '.direnv'; then
                         echo "\n.direnv\n" >> .gitignore
                         echo "added .direnv to .gitignore"
                     fi
