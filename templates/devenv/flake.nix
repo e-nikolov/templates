@@ -30,7 +30,7 @@
                     pkgs.hello
                     pkgs.git
                     pkgs.poetry
-                    pkgs.python311Packages.pip
+                    pkgs.python312Packages.pip
                     pkgs.just
                     pkgs.yarn
                     pkgs.bun
