@@ -26,7 +26,16 @@
               modules = [
                 {
                   # https://devenv.sh/reference/options/
-                  packages = [ pkgs.hello ];
+                  packages = [
+                    pkgs.hello
+                    pkgs.git
+                    pkgs.poetry
+                    pkgs.python311Packages.pip
+                    pkgs.just
+                    pkgs.yarn
+                    pkgs.bun
+                    pkgs.nodePackages_latest.pnpm
+                  ];
 
                   languages.nix.enable = true;
 
